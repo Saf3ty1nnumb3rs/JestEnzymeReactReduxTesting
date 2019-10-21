@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import Stacklist from './Stacklist';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                FlashCard Pro
-            </div>
-        )
-    }
+const App = () => {
+  return (
+    <Container>
+      <Stacklist /> 
+    </Container>
+  )
 }
 
 export default App;

@@ -1,0 +1,120 @@
+body {
+    padding: 5%;
+    text-align: center;
+    background-color: #F4FFFD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.p1 {
+    padding-left: 5px;
+}
+.m1 {
+    margin: 10px;
+}
+
+.inline-box {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: initial;
+    color: #ED254E;
+}
+.button-box {
+    display: flex;
+    width: 25%;
+    max-width: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-home, .link-stack, .link {
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 21px;
+    color: #011936;
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        text-decoration: none;
+    }
+    h4 {
+        margin-bottom: 0;
+    }
+}
+button:disabled {
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+.btn {
+    &.m1 {
+    width: 171px;
+    }
+}
+.link {
+    color: #F9DC5C;
+    .h5 {
+      margin-bottom: 0;
+    }
+    .card-title {
+        padding-left: 20px;
+    }
+}
+.trash {
+  border: none;
+    &:hover {
+      transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+    }
+}
+.flex-block {
+    display: flex;
+    max-width: 100%;
+    min-width: 90%;
+    justify-content: center;
+    margin: 20px auto;
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 1px 2px 2px #888888;
+    cursor: pointer;
+    h4 {
+        margin-bottom: 0;
+    }
+    .card-prompt {
+        display: inline-block;
+        text-align: left;
+        width: 45%;
+        padding-left: 5%;
+    }
+    .card-answer {
+        display: inline-block;
+        text-align: right;
+        width: 45%;
+        padding-right: 5%;
+        &.text-revealed {
+            animation-name: fade-in;
+            animation-duration: 1s;
+            visibility: visible;
+        }
+        &.text-hidden {
+            visibility: hidden;
+        }
+    }
+    &.selector {
+      align-items: center;
+      justify-content: space-between;
+      background-color: #F4FFFD;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 100 }
+}
